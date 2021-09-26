@@ -63,10 +63,11 @@ function Data(props){
       <p>DialingCode: {props.dialingCode}</p>
       <p>President: {props.president}</p>
       <button className="details">Details</button>
+      <i class="fab fa-facebook-square" id="fab"></i>
     </div>
   )
 }
-
+// onClick={loadData}
 function Right(){
   return(
     <div className="right">
