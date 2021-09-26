@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
 
@@ -15,7 +14,7 @@ function App() {
 function Header(){
   return(
     <header className="App-header">
-      <h2 className="title">This is our corporate team</h2>
+      <h2 className="title">This is some country data</h2>
       <h4 className="title">Corporate Teams provides high potential leaders and teams to increase team engagement</h4>
       <h2 className="title">Total Budget: 500 Million</h2>
     </header>
@@ -63,6 +62,7 @@ function Data(props){
       <p>Population:: {props.population}</p>
       <p>DialingCode: {props.dialingCode}</p>
       <p>President: {props.president}</p>
+      <button className="details">Details</button>
     </div>
   )
 }
