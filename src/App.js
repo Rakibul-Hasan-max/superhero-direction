@@ -46,8 +46,6 @@ function Left(){
 
   return(
     <div className="left">
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus hic culpa commodi dolores error, animi nesciunt incidunt rerum est alias molestiae ipsam inventore reprehenderit impedit repellat dolor iure consequuntur dolorem?</p>
-      <p>Name: {left.length}</p>
       {
         left.map(data => <Data name={data.name} capital={data.capital} population={data.population}
         dialingCode={data.dialingCode} president={data.president} img={data.img}></Data>)
@@ -58,7 +56,7 @@ function Left(){
 
 function Data(props){
   return(
-    <div>
+    <div className="card">
       <img src={props.img} alt="" />
       <h2>Name: {props.name}</h2>
       <p>Capital: {props.capital}</p>
