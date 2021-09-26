@@ -37,20 +37,22 @@ img{
 }
 
 .card{
-  background-color: #68e7bf;
+  background-color: #e7eaf0;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
+  box-shadow: 3px 3px 3px gray;
 }
 .details{
   font-size: 20px;
   padding: 8px 15px;
-  background-color: #00fd3f;
+  background-color: #ad24c9;
   border-radius: 5px;
   border: 0.5px solid gray;
+  color: aliceblue;
 }
 #fab{
-  color: #0019fd;
+  color: #650ef0;
   margin-left: 50px;
   font-size: xx-large;
 }

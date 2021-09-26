@@ -37,6 +37,12 @@ function Left(){
   
   const [left, setLeft] = useState([]);
 
+  // click-handler
+  const countryAdd = (left) => {
+    console.log('clicked');
+  }
+countryAdd();
+
   useEffect( () => {
     fetch('./data.JSON')
     .then(res => res.json())
@@ -47,7 +53,8 @@ function Left(){
     <div className="left">
       {
         left.map(data => <Data name={data.name} capital={data.capital} population={data.population}
-        dialingCode={data.dialingCode} president={data.president} img={data.img}></Data>)
+        dialingCode={data.dialingCode} president={data.president} img={data.img} key={data.name}
+        countryAdd={data.countryAdd}></Data>)
       }
     </div>
   )
@@ -62,12 +69,13 @@ function Data(props){
       <p>Population:: {props.population}</p>
       <p>DialingCode: {props.dialingCode}</p>
       <p>President: {props.president}</p>
-      <button className="details">Details</button>
+      <button onClick={props.countryAdd} className="details">Select</button>
       <i class="fab fa-facebook-square" id="fab"></i>
     </div>
   )
 }
-// onClick={loadData}
+
+
 function Right(){
   return(
     <div className="right">
