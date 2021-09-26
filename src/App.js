@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
   return (
@@ -35,20 +35,34 @@ function Main(){
 
 
 function Left(){
+  
+  const [left, setLeft] = useState([]);
+
   useEffect( () => {
     fetch('./data.JSON')
     .then(res => res.json())
-    .then(data => console.log(data));
+    .then(data => setLeft(data));
   } ,[])
-
 
   return(
     <div className="left">
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus hic culpa commodi dolores error, animi nesciunt incidunt rerum est alias molestiae ipsam inventore reprehenderit impedit repellat dolor iure consequuntur dolorem?</p>
+      <p>Name: {left.length}</p>
+      {
+        left.map(data => <Data name={data.name} capital={data.capital}></Data>)
+      }
     </div>
   )
 }
 
+function Data(props){
+  return(
+    <div>
+      <h2>Name: {props.name}</h2>
+      <p>Capital: {props.capital}</p>
+    </div>
+  )
+}
 
 function Right(){
   return(
