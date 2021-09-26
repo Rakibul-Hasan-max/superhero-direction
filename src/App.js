@@ -10,7 +10,7 @@ function App() {
   );
 }
 
-
+// header component
 function Header(){
   return(
     <header className="App-header">
@@ -22,7 +22,7 @@ function Header(){
 }
 
 
-
+// main component
 function Main(){
   return(
     <section className="main">
@@ -33,6 +33,7 @@ function Main(){
 }
 
 
+// left side component
 function Left(){
   
   const [left, setLeft] = useState([]);
@@ -66,7 +67,7 @@ function Data(props){
       <img src={props.img} alt="" />
       <h2>Name: {props.name}</h2>
       <p>Capital: {props.capital}</p>
-      <p>Population:: {props.population}</p>
+      <p>Population: {props.population}</p>
       <p>DialingCode: {props.dialingCode}</p>
       <p>President: {props.president}</p>
       <button onClick={props.countryAdd} className="details">Select</button>
@@ -75,13 +76,13 @@ function Data(props){
   )
 }
 
-
+// right side component
 function Right(){
   return(
     <div className="right">
-      <h3>Added countries: </h3>
-      <h3>Total population: </h3>
-      <p>Name: </p>
+      <h3>Added countries:1 </h3>
+      <h3>Total population: 7886512132 </h3>
+      <h3>Name: Australia </h3>
     </div>
   )
 }
